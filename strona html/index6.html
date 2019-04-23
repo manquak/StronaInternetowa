@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title> Moje Hobby </title>
+	<meta name="description" content="Jest to strona o grach komputerowych"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="img/hobby.jpg">	
+	<script src="JavaScript.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	<script>
+		$(document).ready(function(){
+		  $("#myInput").on("keyup", function() {
+			var value = $(this).val().toLowerCase();
+			$("#myTable tr").filter(function() {
+			  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+			});
+		  });
+		});
+	</script>
+</head> 
+	
+<body onload="wczytajL()">
+
+	<div id="kontener">
+		<div id="logo">
+		<h1>Moje Hobby</h1>
+		</div>
+		
+	<nav id="menu">
+		<ul>
+			<li><a href="index.html">Strona Startowa</a></li>
+			<li><a href="index2.html">League of Legends</a> 
+				<ul>
+				<li> <a href="index3.html">Na czym ta gra polega</a> </li> 
+				<li> <a href="index4.html">Ulubiony gracz</a> </li> 
+				 </ul>
+				
+			</li>
+			<li><a href="index5.html">Galeria Zdjęć</a> 
+			</li>
+			<li><a href="index6.html">Kontakt i inne</a></li>
+		</ul>
+		
+		</nav>
+		
+		<div id="zawartosc"> 
+		<input id="myInput" type="text" placeholder="Szukaj..">
+			<div style="overflow-x:auto;">
+			<table style="width:100% ">
+			<caption> Wybrane top 5 najlepszych statystycznie postaci </caption>
+			  <tr>
+				<th>Ranking </th>
+				<th>Postać</th>
+				<th>Rola</th> 
+				<th>[%]Wygranych gier</th>
+				<th>[%]Granych gier</th>
+			  </tr>
+			  <tbody id="myTable">
+				  <tr>
+					<td>1.</td>
+					<td><img src="img/Malzahar.png" alt="Malzahar_minuaturka" class="miniaturka">Malzahar</td>
+					<td>Środek</td>
+					<td>56.07%</td>
+					<td>6.58%</td>
+				  </tr>
+				  <tr>
+					<td>2.</td>
+					<td><img src="img/Leona.png" alt="Leona_minuaturka" class="miniaturka">Leona</td>
+					<td>Wsparcie</td>
+					<td>55.52%</td>
+					<td>12.65%</td>
+				  </tr>
+				  <tr>
+					<td>3.</td>
+					<td><img src="img/Ezreal.png" alt="Ezreal_minuaturka" class="miniaturka">Ezreal</td>
+					<td>ADC</td>
+					<td>55.09%</td>
+					<td>19.49%</td>
+				  </tr>
+				  <tr>
+					<td>4.</td>
+					<td><img src="img/MissFortune.png" alt="MissFortune_minuaturka" class="miniaturka">Miss Fortune</td>
+					<td>ADC</td>
+					<td>55.00%</td>
+					<td>11.80%</td>
+				  </tr>
+				  <tr>
+					<td>5.</td>
+					<td><img src="img/Taric.png" alt="Taric_minuaturka" class="miniaturka">Taric</td>
+					<td>Wsparcie</td>
+					<td>55.00%</td>
+					<td>3.27%</td>
+				  </tr>
+			  </tbody>
+			</table>
+			</div>
+			
+			<p> Źródło:<a href="http://champion.gg/" class="link" target="_blank"> Champion GG - statystyki League of Legends</a> </p>
+					<h2>Masz jakieś pytania?</h2>
+
+			<form action="mailto:manquak@gmail.com" method="post" enctype="text/plain">
+				<input type="radio" name="Płeć" value="Mężczyzna" checked> Mężczyzna<br>
+				<input type="radio" name="Płeć" value="Kobieta"> Kobieta<br>
+				<input type="checkbox" name="Status" value="Grałem"> Grałem kiedyś w LoL'a<br>
+				<input type="checkbox" name="Status" value="Grałem w inne"> Grałem w inne gry<br>
+				 Data <br>
+				<input id="data" type="date" name="Data_wysłania"> <br>
+				Imię:<br>
+				<input id="name" type="text" name="Imię" ><br>
+				E-mail:<br>
+				<input id="mail" type="text" name="Mail"><br>
+				Komentarz:<br>
+				<textarea  id="comment" name="Komentarz" placeholder="Miejsce na zapytanie..."></textarea><br><br>
+				<input type="submit" value="Wyślij" onclick="zapisz();wczytaj();zapiszL()">
+				<input type="reset" value="Resetuj">
+				
+			</form>
+
+		</div>
+				
+
+				
+		
+		
+		<div id="stopka">
+		Autor: Konrad Paniec &copy;<br>
+		Kontakt:<a class="link" href="mailto:manquak@gmail.com">manquak@gmail.com</a>
+		
+		
+		</div>
+		
+		</div>
+			
+
+
+	
+		
+		
+	
+
+
+
+</body>
+</html>

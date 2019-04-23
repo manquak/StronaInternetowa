@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title> Moje Hobby </title>
+	<meta name="description" content="Jest to strona o grach komputerowych"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="img/hobby.jpg">	
+	<link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script type="text/javascript" src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+	<script type="text/javascript" src="jquery-ui-1.12.1/jquery-ui.js"></script>
+	
+	<script>
+	  $( function() {
+		$( document ).tooltip({
+		  items: "img, [title]",
+		  content: function() {
+			var element = $( this );
+			if ( element.is( "[title]" ) ) {
+			  return element.attr( "title" );
+			}
+			if ( element.is( "img" ) ) {
+			  return element.attr( "alt" );
+			}
+		  }
+		});
+	  } );
+	</script>
+</head>
+
+<body>
+
+	<div id="kontener">
+		<div id="logo">
+		<h1>Moje Hobby</h1>
+		</div>
+		
+		<nav id="menu">
+		<ul>
+			<li><a href="index.html">Strona Startowa</a></li>
+			<li><a href="index2.html">League of Legends</a> 
+				<ul>
+				<li> <a href="index3.html">Na czym ta gra polega</a> </li> 
+				<li> <a href="index4.html">Ulubiony gracz</a> </li> 
+				 </ul>
+				
+			</li>
+			<li><a href="index5.html">Galeria Zdjęć</a> 
+			</li>
+			<li><a href="index6.html">Kontakt i inne</a></li>
+			<li><a href="galeria.php">galeria php</a></li>
+		</ul>
+		
+		</nav>
+		
+		<div id="zawartosc"> 
+		<h1 class="center">Gry Komputerowe<br/> </h1>
+
+		<p>Raczej każdy zdaje sobię sprawę z tego czym są gry komputerowe, ale dla nadgorliwych przytoczę fragment z <a href="https://pl.wikipedia.org/wiki/Wikipedia:Strona_g%C5%82%C3%B3wna" id="wikipedia" class="link" title="wikipedia, co bysmy bez niej zrobili">wikipedii </a>;)<p>
+		<p> Gra komputerowa (gra wideo, ang. video game) – rodzaj oprogramowania komputerowego przeznaczonego do celów rozrywkowych bądź edukacyjnych (rozrywka interaktywna) i wymagającego od użytkownika (gracza) rozwiązywania zadań logicznych lub zręcznościowych.<p> <br/>
+		<img class="test"  src="img/gry.jpg" alt="Gry">
+		<p> Jako, że jest to strona o mnie, przedstawię tutaj moją ulubioną grę. Ta gra to League of Legends, podchodzi ona pod kategorię E-sportu.</p> 
+		<p>Czym jest E-sport? Znowu posłużę się cytatem z <a href="#wikipedia">wikipedii.</a> 
+		Jest to forma rywalizacji, w której przedmiotem działań zawodników są gry komputerowe. Rywalizacja między zawodnikami (graczami) odbywa się zarówno
+		w formie rekreacyjnej, jak i na turniejach gier komputerowych (tzw. „pro gaming”). Historia e-sportu wiąże się ze wzrastającą popularnością rozgrywek 
+		sieciowych w grach takich jak StarCraft, Counter-Strike, Quake, Warcraft II: Tides of Darkness czy też właśnie League of Legends. </p>
+		
+		<script type="text/javascript">
+			let paragraf = document.createElement("p");
+			let tekst = document.createTextNode("Życzę miłej lektury ;)");
+			paragraf.appendChild(tekst);
+			document.getElementById("zawartosc").appendChild(paragraf);
+		</script>
+
+		<script>
+			var zdjecie = new Image(50,50);
+			var box = document.getElementById("zawartosc");
+			zdjecie.onload = function() {
+			  box.appendChild(zdjecie);
+			}
+			zdjecie.src = "img/okejka.jpg";
+		</script>
+		
+		</div>
+		
+		
+		<div id="stopka">
+		Autor: Konrad Paniec &copy; 
+		
+		</div>
+
+
+
+	</div>
+</body>
+</html>
